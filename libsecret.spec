@@ -1,4 +1,4 @@
-%define	api	0
+%define	api	1
 %define	major	0
 %define	libname	%mklibname secret %{api} %{major}
 %define	girname	%mklibname secret-gir %{api} 
@@ -6,7 +6,7 @@
 
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
-Version:	0.5
+Version:	0.6
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
@@ -65,7 +65,9 @@ This package contains the development files for %{name}.
 %install
 %makeinstall_std
 
-%files tools
+%find_lang %{name}
+
+%files tools -f %{name}.lang
 %doc AUTHORS COPYING NEWS README
 %{_bindir}/secret-tool
 
@@ -74,11 +76,14 @@ This package contains the development files for %{name}.
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/Secret-%{api}.typelib
+%{_libdir}/girepository-1.0/SecretUnstable-0.typelib
 
 %files -n %{devname}
 %{_libdir}/libsecret-%{api}.so
 %{_libdir}/pkgconfig/libsecret-%{api}.pc
-%{_includedir}/secret-%{api}/
+%{_libdir}/pkgconfig/libsecret-unstable.pc
+%{_includedir}/libsecret-%{api}/
 %{_datadir}/gir-1.0/Secret-%{api}.gir
+%{_datadir}/gir-1.0/SecretUnstable-0.gir
 %doc %{_datadir}/gtk-doc/html/libsecret-%{api}/
 
