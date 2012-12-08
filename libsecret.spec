@@ -6,14 +6,13 @@
 
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
-Version:	0.9
+Version:	0.8
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.gnome.org/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/%{name}-%{version}.tar.xz
 BuildRequires:	intltool
-BuildRequires:	xsltproc
 BuildRequires:	libgcrypt-devel
 BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
@@ -87,4 +86,26 @@ This package contains the development files for %{name}.
 %{_datadir}/gir-1.0/Secret-%{api}.gir
 %{_datadir}/gir-1.0/SecretUnstable-0.gir
 %doc %{_datadir}/gtk-doc/html/libsecret-%{api}/
+
+
+
+%changelog
+* Mon Aug 06 2012 Matthew Dawkins <mattydaw@mandriva.org> 0.8-1
++ Revision: 811873
+- update to new version 0.8
+
+* Mon Jul 16 2012 Matthew Dawkins <mattydaw@mandriva.org> 0.7-1
++ Revision: 809890
+- update to new version 0.7
+
+* Sat Jul 14 2012 Matthew Dawkins <mattydaw@mandriva.org> 0.6-1
++ Revision: 809291
+- another new version 0.6
+- new api 1
+- updated files lists
+- update to new version 0.5
+
+* Mon Jun 25 2012 Matthew Dawkins <mattydaw@mandriva.org> 0.3-1
++ Revision: 806812
+- imported package libsecret
 
