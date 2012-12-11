@@ -14,7 +14,9 @@ License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.gnome.org/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/%{url_ver}/%{name}-%{version}.tar.xz
+
 BuildRequires:	intltool
+BuildRequires:	xsltproc
 BuildRequires:	libgcrypt-devel
 BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
