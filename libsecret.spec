@@ -75,6 +75,7 @@ This package contains the development files for %{name}.
 %files tools -f %{name}.lang
 %doc AUTHORS COPYING NEWS README
 %{_bindir}/secret-tool
+%{_mandir}/man1/secret-tool.1*
 
 %files -n %{libname}
 %{_libdir}/libsecret-%{api}.so.%{major}*
