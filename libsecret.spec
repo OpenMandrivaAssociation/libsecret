@@ -1,6 +1,6 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define	api	l
+%define	api	1
 %define	major	0
 %define	libname	%mklibname secret %{api} %{major}
 %define	girname	%mklibname secret-gir %{api} 
