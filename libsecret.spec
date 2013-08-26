@@ -8,7 +8,7 @@
 
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
-Version:	0.15
+Version:	0.16
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
@@ -22,6 +22,8 @@ BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libgcrypt)
+BuildRequires:  vala-tools
+BuildRequires:  pkgconfig(vapigen)
 
 %description
 libsecret is a library for storing and retrieving passwords and other
@@ -63,6 +65,8 @@ This package contains the development files for %{name}.
 
 %build
 %configure2_5x \
+	--enable-introspection=yes \
+	--enable-vala=yes \
 	--disable-static
 
 %make
@@ -91,5 +95,6 @@ This package contains the development files for %{name}.
 %{_includedir}/libsecret-%{api}/
 %{_datadir}/gir-1.0/Secret-%{api}.gir
 %{_datadir}/gir-1.0/SecretUnstable-0.gir
+%{_datadir}/vala/vapi/*
 %doc %{_datadir}/gtk-doc/html/libsecret-%{api}/
 
