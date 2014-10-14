@@ -8,8 +8,8 @@
 
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
-Version:	0.16
-Release:	7
+Version:	0.18
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.gnome.org/
@@ -64,7 +64,7 @@ This package contains the development files for %{name}.
 %setup -q
 
 %build
-%configure2_5x \
+%configure \
 	--enable-introspection=yes \
 	--enable-vala=yes \
 	--disable-static
@@ -86,7 +86,6 @@ This package contains the development files for %{name}.
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/Secret-%{api}.typelib
-%{_libdir}/girepository-1.0/SecretUnstable-0.typelib
 
 %files -n %{devname}
 %{_libdir}/libsecret-%{api}.so
@@ -94,7 +93,6 @@ This package contains the development files for %{name}.
 %{_libdir}/pkgconfig/libsecret-unstable.pc
 %{_includedir}/libsecret-%{api}/
 %{_datadir}/gir-1.0/Secret-%{api}.gir
-%{_datadir}/gir-1.0/SecretUnstable-0.gir
 %{_datadir}/vala/vapi/*
 %doc %{_datadir}/gtk-doc/html/libsecret-%{api}/
 
