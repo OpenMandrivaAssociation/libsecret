@@ -1,4 +1,5 @@
 removed_sources:
   libsecret-0.16.tar.xz: 9110beaaa0dbaf0d8119c1a04f38ef87320cbc0e
-sources:
   libsecret-0.18.tar.xz: af62de3958bbe0ccf59a02101a6704e036378a6f
+sources:
+  libsecret-0.18.2.tar.xz: 069a081f6c958646be57ac864e1a0da61f9db2fd
