@@ -3,12 +3,12 @@
 %define	api	1
 %define	major	0
 %define	libname	%mklibname secret %{api} %{major}
-%define	girname	%mklibname secret-gir %{api} 
+%define	girname	%mklibname secret-gir %{api}
 %define	devname	%mklibname secret -d
 
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
-Version:	0.18.2
+Version:	0.18.3
 Release:	3
 License:	LGPLv2+
 Group:		System/Libraries
