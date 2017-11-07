@@ -1,15 +1,15 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define	api	1
-%define	major	0
-%define	libname	%mklibname secret %{api} %{major}
-%define	girname	%mklibname secret-gir %{api}
-%define	devname	%mklibname secret -d
+%define	api 1
+%define	major 0
+%define	libname %mklibname secret %{api} %{major}
+%define	girname %mklibname secret-gir %{api}
+%define	devname %mklibname secret -d
 
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
-Version:	0.18.3
-Release:	3
+Version:	0.18.5
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.gnome.org/
@@ -95,4 +95,3 @@ This package contains the development files for %{name}.
 %{_datadir}/gir-1.0/Secret-%{api}.gir
 %{_datadir}/vala/vapi/*
 %doc %{_datadir}/gtk-doc/html/libsecret-%{api}/
-
