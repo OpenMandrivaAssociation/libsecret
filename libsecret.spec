@@ -9,12 +9,11 @@
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
 Version:	0.18.5
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.gnome.org/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/%{url_ver}/%{name}-%{version}.tar.xz
-
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	xsltproc
@@ -22,8 +21,9 @@ BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libgcrypt)
-BuildRequires:  vala-tools
-BuildRequires:  pkgconfig(vapigen)
+BuildRequires:	pkgconfig(gpg-error)
+BuildRequires:	vala-tools
+BuildRequires:	pkgconfig(vapigen)
 
 %description
 libsecret is a library for storing and retrieving passwords and other
@@ -69,10 +69,10 @@ This package contains the development files for %{name}.
 	--enable-vala=yes \
 	--disable-static
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name}
 
