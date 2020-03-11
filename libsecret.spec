@@ -8,7 +8,7 @@
 
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
-Version:	0.20.1
+Version:	0.20.2
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
