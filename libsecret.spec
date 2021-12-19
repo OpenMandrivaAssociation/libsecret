@@ -9,7 +9,7 @@
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
 Version:	0.20.4
-Release:	3
+Release:	4
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.gnome.org/
@@ -40,6 +40,9 @@ secrets. It communicates with the "Secret Service" using DBus.
 %package -n %{libname}
 Summary:	Library for accessing the Secret Service API
 Group:		System/Libraries
+# For compatibility with 3rd party Skype packages from
+# https://repo.skype.com/rpm/
+Provides:	libsecret = %{EVRD}
 
 %description -n %{libname}
 This package contains the shared library for %{name}.
