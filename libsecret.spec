@@ -80,6 +80,7 @@ This package contains the development files for %{name}.
 
 %files tools -f %{name}.lang
 %doc COPYING NEWS README.md
+%doc %{_datadir}/doc/libsecret-1/
 %{_bindir}/secret-tool
 %{_mandir}/man1/secret-tool.1*
 
