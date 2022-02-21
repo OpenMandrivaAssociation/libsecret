@@ -79,7 +79,7 @@ This package contains the development files for %{name}.
 %find_lang %{name}
 
 %files tools -f %{name}.lang
-%doc AUTHORS COPYING NEWS README
+%doc COPYING NEWS README.md
 %{_bindir}/secret-tool
 %{_mandir}/man1/secret-tool.1*
 
