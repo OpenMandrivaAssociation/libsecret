@@ -15,7 +15,7 @@ Group:		System/Libraries
 Url:		http://www.gnome.org/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	gtk-doc
-BuildRequires:	intltool
+BuildRequires:	meson
 BuildRequires:	xsltproc
 BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
@@ -67,15 +67,12 @@ This package contains the development files for %{name}.
 %setup -q
 
 %build
-%configure \
-	--enable-introspection=yes \
-	--enable-vala=yes \
-	--disable-static
+%meson
 
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %find_lang %{name}
 
