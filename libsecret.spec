@@ -96,4 +96,4 @@ This package contains the development files for %{name}.
 %{_includedir}/libsecret-%{api}/
 %{_datadir}/gir-1.0/Secret-%{api}.gir
 %{_datadir}/vala/vapi/*
-%doc %{_datadir}/gtk-doc/html/libsecret-%{api}/
+#doc #{_datadir}/gtk-doc/html/libsecret-%{api}/
