@@ -17,6 +17,8 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/%{url_ver}/%{name}-%{v
 BuildRequires:	gtk-doc
 BuildRequires:	meson
 BuildRequires:	xsltproc
+BuildRequires:  gjs
+BuildRequires:  pkgconfig(gi-docgen)
 BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
