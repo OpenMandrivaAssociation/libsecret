@@ -9,7 +9,7 @@
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
 Version:	0.20.5
-Release:	3
+Release:	4
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.gnome.org/
@@ -17,8 +17,8 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/%{url_ver}/%{name}-%{v
 BuildRequires:	gtk-doc
 BuildRequires:	meson
 BuildRequires:	xsltproc
-BuildRequires:  gjs
-BuildRequires:  pkgconfig(gi-docgen)
+BuildRequires:	gjs
+BuildRequires:	pkgconfig(gi-docgen)
 BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
@@ -66,7 +66,7 @@ Requires:	%{girname} = %{version}
 This package contains the development files for %{name}.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %meson
@@ -82,7 +82,7 @@ This package contains the development files for %{name}.
 %doc COPYING NEWS README.md
 %doc %{_datadir}/doc/libsecret-1/
 %{_bindir}/secret-tool
-%{_mandir}/man1/secret-tool.1*
+%doc %{_mandir}/man1/secret-tool.1*
 
 %files -n %{libname}
 %{_libdir}/libsecret-%{api}.so.%{major}*
