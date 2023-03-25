@@ -6,6 +6,8 @@
 %define	girname %mklibname secret-gir %{api}
 %define	devname %mklibname secret -d
 
+%global optflags %optflags -Wno-error=cast-function-type-strict 
+
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
 Version:	0.20.5
