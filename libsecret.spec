@@ -32,6 +32,7 @@ BuildRequires:	pkgconfig(vapigen)
 %endif
 BuildRequires:	pkgconfig(libgcrypt)
 BuildRequires:	pkgconfig(gpg-error)
+BuildRequires:  pkgconfig(bash-completion)
 
 %description
 libsecret is a library for storing and retrieving passwords and other
@@ -95,6 +96,7 @@ This package contains the development files for %{name}.
 %doc %{_docdir}/libsecret-1/
 %endif
 %{_bindir}/secret-tool
+%{_datadir}/bash-completion/completions/secret-tool
 %doc %{_mandir}/man1/secret-tool.1*
 
 %files -n %{libname}
