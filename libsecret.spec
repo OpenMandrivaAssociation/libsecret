@@ -12,8 +12,8 @@
 
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
-Version:	0.21.4
-Release:	3
+Version:	0.21.6
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://www.gnome.org/
