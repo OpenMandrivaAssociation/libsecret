@@ -13,7 +13,7 @@
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
 Version:	0.21.6
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://www.gnome.org/
@@ -33,6 +33,9 @@ BuildRequires:	pkgconfig(vapigen)
 BuildRequires:	pkgconfig(libgcrypt)
 BuildRequires:	pkgconfig(gpg-error)
 BuildRequires:  pkgconfig(bash-completion)
+
+Requires:	%{libname} = %{version}
+Requires:	%{girname} = %{version}
 
 %description
 libsecret is a library for storing and retrieving passwords and other
