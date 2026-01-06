@@ -91,6 +91,14 @@ This package contains the development files for %{name}.
 %install
 %meson_install
 
+%if %{cross_compiling}
+# FIXME this should really be fixed in pkg-config, for some reason
+# it gets confused by datadir references in bash-completion.pc and
+# installs files in the wrong place while crosscompiling
+mv %{buildroot}%{_prefix}/%{_target_platform}%{_datadir}/bash-completion %{buildroot}%{_datadir}
+rm -rf %{buildroot}%{_prefix}/%{_target_platform}
+%endif
+
 %find_lang %{name}
 
 %files tools -f %{name}.lang
