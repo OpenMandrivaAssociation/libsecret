@@ -13,7 +13,7 @@
 Summary:	Library for accessing the Secret Service API
 Name:		libsecret
 Version:	0.21.7
-Release:	3
+Release:	4
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://www.gnome.org/
@@ -95,7 +95,9 @@ This package contains the development files for %{name}.
 # FIXME this should really be fixed in pkg-config, for some reason
 # it gets confused by datadir references in bash-completion.pc and
 # installs files in the wrong place while crosscompiling
-mv %{buildroot}%{_prefix}/%{_target_platform}%{_datadir}/bash-completion %{buildroot}%{_datadir}
+if [ -d %{buildroot}%{_prefix}/%{_target_platform}%{_datadir}/bash-completion ]; then
+	mv %{buildroot}%{_prefix}/%{_target_platform}%{_datadir}/bash-completion %{buildroot}%{_datadir}
+fi
 rm -rf %{buildroot}%{_prefix}/%{_target_platform}
 %endif
 
