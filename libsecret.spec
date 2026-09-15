@@ -32,7 +32,7 @@ BuildRequires:	pkgconfig(vapigen)
 %endif
 BuildRequires:	pkgconfig(libgcrypt)
 BuildRequires:	pkgconfig(gpg-error)
-BuildRequires:  pkgconfig(bash-completion)
+BuildRequires:	pkgconfig(bash-completion)
 
 Requires:	%{libname} = %{EVRD}
 Requires:	%{girname} = %{EVRD}
@@ -77,7 +77,9 @@ This package contains the development files for %{name}.
 
 %prep
 %autosetup -p1
+# --auto-features=enabled would turn test_setup on and require dbus-run-session
 %meson \
+	-Dtest_setup=disabled \
 %if %{with gir}
 	-Dintrospection=true
 %else
